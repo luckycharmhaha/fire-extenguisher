@@ -5,13 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BD Engineering Corporation | Fire &amp; Industrial Safety Engineers</title>
 <meta name="description" content="BD Engineering Corporation — ISO 9001:2015 certified fire and industrial safety engineers serving since 1984. Siliguri, West Bengal.">
-
-<meta property="og:title" content="BD Engineering Corporation | Fire &amp; Industrial Safety Engineers">
-<meta property="og:description" content="ISO 9001:2015 certified fire and industrial safety engineers serving Siliguri and North Bengal since 1984.">
-<meta property="og:image" content="https://YOUR-VERCEL-DOMAIN.vercel.app/bd-logo.png">
-<meta property="og:url" content="https://YOUR-VERCEL-DOMAIN.vercel.app/">
-<meta property="og:type" content="website">
-
 <link rel="icon" type="image/png" href="bd-logo.png">
 <style>
   :root{
@@ -76,12 +69,12 @@
   /* ===== Top marquee strip ===== */
   .strip{
     background:var(--ink);color:#e9e6df;font-size:.82rem;
-    padding:8px 0;overflow:hidden;position:relative;white-space:nowrap;
+    padding:8px 0 8px 24px;overflow:hidden;position:relative;white-space:nowrap;
   }
-  .strip .track{display:inline-block;padding-left:100%;animation:marquee 26s linear infinite}
-  .strip span{margin:0 34px;opacity:.9;letter-spacing:.03em}
+  .strip .track{display:inline-flex;animation:marquee 26s linear infinite}
+  .strip span{margin:0 34px;opacity:.9;letter-spacing:.03em;flex-shrink:0}
   .strip strong{color:var(--ember)}
-  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
   /* ===== Header ===== */
   header{
@@ -90,8 +83,7 @@
     border-bottom:1px solid var(--line);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-  .brand{display:flex;align-items:center;gap:12px;min-width:0}
-  .brand-text{min-width:0}
+  .brand{display:flex;align-items:center;gap:12px}
   .emblem-chip{
     flex-shrink:0;width:50px;height:50px;border-radius:10px;overflow:hidden;
     background:#fff;box-shadow:0 2px 8px rgba(20,24,28,.18);display:flex;align-items:center;justify-content:center;
@@ -140,7 +132,7 @@
     10%{opacity:.5}
     100%{transform:translateY(-110vh) translateX(30px);opacity:0}
   }
-  .hero-inner{position:relative;z-index:2;padding:70px 0}
+  .hero-inner{position:relative;z-index:2;padding-top:70px;padding-bottom:70px}
   .hero-badge{
     display:inline-flex;align-items:center;gap:10px;
     background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);
@@ -162,7 +154,7 @@
 
   /* ===== Trust bar ===== */
   .trust{background:var(--paper-dim);border-bottom:1px solid var(--line)}
-  .trust .container{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;padding:26px 24px}
+  .trust .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:center;gap:20px;padding:26px 24px}
   .trust-item{display:flex;align-items:center;gap:12px;font-size:.9rem;font-weight:600;color:var(--ink-soft)}
   .trust-item .ic{width:34px;height:34px;flex-shrink:0}
 
@@ -189,7 +181,7 @@
   .about-visual .badge-core .yr{font-family:'Georgia',serif;font-size:2rem;font-weight:700}
   .about-visual .badge-core .sm{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;margin-top:4px;opacity:.85}
   .about-list{margin-top:30px;display:grid;gap:16px}
-  .about-list li{display:flex;gap:14px;align-items:flex-start;font-size:.98rem;color:var(--ink-soft);min-width:0}
+  .about-list li{display:flex;gap:14px;align-items:flex-start;font-size:.98rem;color:var(--ink-soft)}
   .about-list .chk{
     flex-shrink:0;width:26px;height:26px;border-radius:50%;background:rgba(200,16,46,.1);
     color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;
@@ -243,7 +235,7 @@
     transform:scale(1.12) rotate(-4deg);
     box-shadow:inset 0 0 0 1px rgba(0,0,0,.07),0 10px 24px rgba(0,0,0,.45),0 0 0 3px rgba(255,106,61,.35);
   }
-  .prod-card p{font-size:.9rem;color:#e0ddd7;position:relative;min-width:0}
+  .prod-card p{font-size:.9rem;color:#e0ddd7;position:relative}
 
   /* ===== Why us ===== */
   .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:24px}
@@ -270,13 +262,11 @@
     background:linear-gradient(120deg,var(--ink),#262b31);color:#fff;padding:22px 26px;
     display:flex;align-items:center;gap:14px;
   }
-  .branch-card .head > div{min-width:0}
   .branch-card .head .tag{
     font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ember);font-weight:700;
   }
   .branch-card .head h3{font-size:1.15rem;margin-top:2px}
   .branch-card .body{padding:22px 26px;color:var(--ink-soft);font-size:.94rem;display:flex;gap:12px}
-  .branch-card .body span{min-width:0}
 
   /* ===== CTA banner ===== */
   .cta-banner{
@@ -291,7 +281,6 @@
     display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;
     padding:56px 24px;position:relative;z-index:1;
   }
-  .cta-banner .container > div{min-width:0}
   .cta-banner h2{font-size:clamp(1.5rem,2.6vw,2.1rem)}
   .cta-banner p{opacity:.9;margin-top:8px}
   .cta-phone{
@@ -353,9 +342,10 @@
      don't fit in a 768px tablet row, so give it its own, wider breakpoint. */
   @media (max-width:940px){
     .nav-links{position:fixed;top:78px;left:0;right:0;background:var(--paper);flex-direction:column;
-      padding:20px 24px;gap:0;border-bottom:1px solid var(--line);transform:translateY(-130%);
-      transition:transform .3s ease;box-shadow:var(--shadow-lg);max-height:calc(100vh - 78px);overflow-y:auto;}
-    .nav-links.open{transform:translateY(0)}
+      padding:20px 24px;gap:0;border-bottom:1px solid var(--line);transform:translateY(-16px);
+      opacity:0;visibility:hidden;
+      transition:transform .25s ease,opacity .25s ease,visibility .25s;box-shadow:var(--shadow-lg);max-height:calc(100vh - 78px);overflow-y:auto;}
+    .nav-links.open{transform:translateY(0);opacity:1;visibility:visible}
     .nav-links a{width:100%;padding:14px 0;border-bottom:1px solid var(--line)}
     .nav-call{display:none}
     .burger{display:flex}
@@ -366,17 +356,16 @@
     .hero-stats .stat{padding-right:24px;margin-right:24px}
     .footer-grid{grid-template-columns:1fr;gap:30px}
     .cta-banner .container{flex-direction:column;align-items:flex-start}
-    .trust .container{flex-direction:column;align-items:flex-start}
   }
   @media (max-width:400px){
     .brand-text .name{font-size:1rem}
     .emblem-chip{width:42px;height:42px}
     section{padding:48px 0}
-    .hero-inner{padding:48px 0}
+    .hero-inner{padding-top:48px;padding-bottom:48px}
   }
   @media (max-height:480px) and (orientation:landscape){
     .hero{min-height:auto}
-    .hero-inner{padding:40px 0}
+    .hero-inner{padding-top:40px;padding-bottom:40px}
   }
 </style>
 </head>
@@ -909,7 +898,7 @@
           </div>
           <div class="contact-row">
             <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div>
-            <div><div class="lbl">Email</div><div class="val"><a href="mailto:bdenggslg@gmail.com">bdenggslg@gmail.com</a></div></div>
+            <div><div class="lbl">Email</div><div class="val"><a href="mailto:bdengrsig@gmail.com">bdeng@gmail.com</a></div></div>
           </div>
           <div class="contact-row">
             <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
